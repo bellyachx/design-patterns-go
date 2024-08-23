@@ -6,7 +6,7 @@ func main() {
 
 	nginxServer := newNginxServer()
 	appStatusURL := "/app/status"
-	createuserURL := "/create/user"
+	createUserURL := "/create/user"
 
 	httpCode, body := nginxServer.handleRequest(appStatusURL, "GET")
 	fmt.Printf("\nUrl: %s\nHttpCode: %d\nBody: %s\n", appStatusURL, httpCode, body)
@@ -17,9 +17,9 @@ func main() {
 	httpCode, body = nginxServer.handleRequest(appStatusURL, "GET")
 	fmt.Printf("\nUrl: %s\nHttpCode: %d\nBody: %s\n", appStatusURL, httpCode, body)
 
-	httpCode, body = nginxServer.handleRequest(createuserURL, "POST")
-	fmt.Printf("\nUrl: %s\nHttpCode: %d\nBody: %s\n", appStatusURL, httpCode, body)
+	httpCode, body = nginxServer.handleRequest(createUserURL, "POST")
+	fmt.Printf("\nUrl: %s\nHttpCode: %d\nBody: %s\n", createUserURL, httpCode, body)
 
-	httpCode, body = nginxServer.handleRequest(createuserURL, "GET")
-	fmt.Printf("\nUrl: %s\nHttpCode: %d\nBody: %s\n", appStatusURL, httpCode, body)
+	httpCode, body = nginxServer.handleRequest(createUserURL, "GET")
+	fmt.Printf("\nUrl: %s\nHttpCode: %d\nBody: %s\n", createUserURL, httpCode, body)
 }

@@ -10,10 +10,10 @@ Url: /app/status
 HttpCode: 403
 Body: Not Allowed
 
-Url: /app/status
+Url: /create/user
 HttpCode: 201
 Body: User Created
 
-Url: /app/status
+Url: /create/user
 HttpCode: 404
 Body: Not Ok
